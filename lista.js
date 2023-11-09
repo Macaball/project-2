@@ -102,3 +102,28 @@ if (indiceAEliminar !== -1) {
 }
 
 console.log(listaDeContactos);
+
+// Lista de contactos de ejemplo
+let contactos = [
+  { id: 1, nombre: "Juan", telefono: "8984567890" },
+  { id: 2, nombre: "Marisol", telefono: "9876543210" },
+  { id: 3, nombre: "Carlos", telefono: "555559990" },
+];
+
+// Función para actualizar un contacto por ID
+function actualizarContacto(id, nuevoNombre, nuevoTelefono) {
+  const contactoActualizado = contactos.find((contacto) => contacto.id === id);
+  if (contactoActualizado) {
+    contactoActualizado.nombre = nuevoNombre;
+    contactoActualizado.telefono = nuevoTelefono;
+    console.log(`Contacto con ID ${id} actualizado.`);
+  } else {
+    console.log(`No se encontró un contacto con ID ${id}.`);
+  }
+}
+
+// Ejemplo de uso de la función para actualizar un contacto
+actualizarContacto(1, "Juan", "8984567890");
+
+// Comprobar si el contacto se ha actualizado
+console.log(contactos);
